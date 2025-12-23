@@ -117,15 +117,15 @@ header p {
    IMAGEN DE TARJETA
 ===================== */
 .card-image {
-  text-align: center;
-  margin-top: 10px;
+  margin: 10px 0;
+  width: 100%;
 }
 
 .card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
 }
 
 /* =====================
