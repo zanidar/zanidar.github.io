@@ -113,9 +113,19 @@ header p {
   opacity: 0.85;
 }
 
-.card img {
-  border-radius: 8px;
+/* =====================
+   IMAGEN DE TARJETA
+===================== */
+.card-image {
+  text-align: center;
   margin-top: 10px;
+}
+
+.card-image img {
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* =====================
