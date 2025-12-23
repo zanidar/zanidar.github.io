@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "La nueva ola de IA redefine cómo interactuamos con la tecnología"
-excerpt: "Expertos aseguran que la inteligencia artificial entra en una fase acelerada."
+title: "crisis de la memoria ram"
+excerpt: "Expertos aseguran que no habra ram para nadie."
 image: https://images.unsplash.com/photo-1503264116251-35a269479413?w=1200
 category: Innovación
 ---
