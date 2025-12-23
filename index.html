@@ -5,38 +5,36 @@ title: Noticias de Tecnología e Innovación
 
 <section class="posts-grid">
   {% for post in site.posts limit:5 %}
-    <article class="card">
-      <header>
-        {% if post.category %}
-          <span class="tag">{{ post.category }}</span>
+    <a href="{{ post.url | relative_url }}" class="card-link" title="Leer más sobre {{ post.title }}">
+      <article class="card">
+        <header>
+          {% if post.category %}
+            <span class="tag">{{ post.category }}</span>
+          {% endif %}
+          <h2>{{ post.title }}</h2>
+        </header>
+
+        {% if post.image %}
+          <div class="card-image">
+            <img src="{{ post.image | relative_url }}" 
+                 alt="{{ post.title }}" 
+                 loading="lazy" 
+                 width="400" 
+                 height="250">
+          </div>
         {% endif %}
-        <h2>
-          <a href="{{ post.url | relative_url }}" title="Leer más sobre {{ post.title }}">
-            {{ post.title }}
-          </a>
-        </h2>
-      </header>
 
-      {% if post.image %}
-        <div class="card-image">
-          <img src="{{ post.image | relative_url }}" 
-               alt="{{ post.title }}" 
-               loading="lazy" 
-               width="400" 
-               height="250">
+        <div class="card-excerpt">
+          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
         </div>
-      {% endif %}
 
-      <div class="card-excerpt">
-        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-      </div>
-
-      <footer>
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: "%d de %B, %Y" }}
-        </time>
-      </footer>
-    </article>
+        <footer>
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%d de %B, %Y" }}
+          </time>
+        </footer>
+      </article>
+    </a>
   {% endfor %}
 </section>
 
