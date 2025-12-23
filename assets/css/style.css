@@ -1,89 +1,196 @@
+/* =====================
+   VARIABLES
+===================== */
 :root {
-  --bg: #0f172a;        /* Fondo azul marino muy oscuro */
-  --card-bg: #1e293b;   /* Fondo de tarjetas/secciones */
-  --accent: #38bdf8;    /* Azul brillante para detalles */
-  --text-main: #f1f5f9; /* Blanco grisáceo para lectura */
-  --text-muted: #94a3b8;/* Gris para fechas y detalles */
+  --bg: #ffffff;
+  --text: #222222;
+  --card: #f4f4f4;
+  --accent: #111827;
+  --tag: #4f46e5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0e0e;
+    --text: #eeeeee;
+    --card: #1a1a1a;
+    --accent: #000000;
+  }
+}
+
+/* =====================
+   BASE
+===================== */
+* {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter', -apple-system, sans-serif;
-  background-color: var(--bg);
-  color: var(--text-main);
   margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/* Header elegante */
-.main-header {
-  text-align: center;
-  padding: 60px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.main-header h1 a {
+/* =====================
+   HEADER
+===================== */
+header {
+  background: var(--accent);
   color: white;
-  text-decoration: none;
-  font-size: 2.2rem;
-  font-weight: 800;
-  letter-spacing: -1px;
+  padding: 25px 20px;
+  border-bottom: 4px solid var(--tag);
+  text-align: center;
 }
 
-/* Etiquetas (Innovación, etc) */
-.tag {
-  display: inline-block;
-  background: rgba(56, 189, 248, 0.2);
-  color: var(--accent);
-  padding: 4px 12px;
-  border-radius: 100px;
-  font-size: 0.75rem;
+header h1 {
+  margin: 0;
+  font-size: 2.4rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
-/* Títulos */
-.post-title {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  margin: 10px 0 20px 0;
-  color: #fff;
+header p {
+  margin: 8px 0 0;
+  opacity: 0.85;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
-/* Meta información (fecha) */
-.meta {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  margin-bottom: 30px;
+/* =====================
+   CONTENEDOR
+===================== */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
-/* Imagen principal */
-.featured-image {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-  margin-bottom: 30px;
-}
-
-/* Contenido del texto */
-.post-content {
-  font-size: 1.15rem;
-  color: #cbd5e1;
-}
-
-/* Botón volver */
-.back-link {
-  display: inline-block;
-  margin-top: 50px;
-  color: var(--accent);
+/* =====================
+   LINKS TARJETAS
+===================== */
+.card-link {
   text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* =====================
+   TARJETAS (POSTS)
+===================== */
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.2s ease;
+  border-left: 5px solid var(--tag);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
-.back-link:hover { text-decoration: underline; }
+.card p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.card img {
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* =====================
+   TAGS
+===================== */
+.tag {
+  display: inline-block;
+  background: var(--tag);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+/* =====================
+   POST INDIVIDUAL
+===================== */
+article {
+  margin-top: 20px;
+}
+
+article h2 {
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+article p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.meta {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+/* =====================
+   BOTÓN VOLVER
+===================== */
+.back {
+  display: inline-block;
+  margin-top: 40px;
+  text-decoration: none;
+  color: var(--tag);
+  font-weight: 500;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  opacity: 0.7;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc3;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+}
