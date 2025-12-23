@@ -2,3 +2,8 @@ title: TechNews Hoy
 description: Noticias de tecnología, innovación y tendencias
 theme: null
 markdown: kramdown
+
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
