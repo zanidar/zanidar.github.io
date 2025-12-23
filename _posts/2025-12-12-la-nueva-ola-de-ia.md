@@ -2,7 +2,7 @@
 layout: post
 title: "La nueva ola de IA redefine cómo interactuamos con la tecnología"
 excerpt: "Expertos aseguran que la inteligencia artificial entra en una fase acelerada."
-image: https://images.unsplash.com/photo-1503264116251-35a269479413?w=1200
+image: https://unsplash.com/es/fotos/antecedentes-tecnologicos-cpu-moderna-en-un-motherbaord-para-dispositivos-moviles-y-ordenadores-render-de-ilustracion-3d-U23_in9LPAk
 category: Innovación
 ---
 
